@@ -48,8 +48,10 @@ chmod +x ${INSTALL_DIR}/generate_config.py && \
 
 fix-ownership ${INSTALL_DIR} ${CATALINA_HOME} && \
 fix-permissions ${INSTALL_DIR} ${CATALINA_HOME} && \
-rm -rf ${TEMP_DIR_ROOT} && \
-popd
+
+popd && \
+rm -rf ${TEMP_DIR_ROOT}
+
 
 ENV M2_HOME ${INSTALL_DIR}
 ENV PATH ${PATH}:${M2_HOME}/bin
